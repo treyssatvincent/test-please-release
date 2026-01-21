@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - release-candidate
 
 permissions:
   contents: write
@@ -12,20 +11,30 @@ permissions:
   pull-requests: write
 
 jobs:
-  pre-release-please:
-    if: github.ref == 'refs/heads/release-candidate'
+  # this run on our commits on main to open the RC Pull Request
+  please-release-candidate:
+    name: Create RC Pull Request
     runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
-      - uses: googleapis/release-please-action@v4
+      - id: release
+        name: Run prerelease release-please
+        uses: googleapis/release-please-action@v4.4.0
         with:
-          config-file: pre-release-please-config.json
-          manifest-file: .pre-release-please-manifest.json
+          config-file: ".github/prerelease-config.json"
+          manifest-file: ".github/prerelease-manifest.json"
 
-  release-please:
-    if: github.ref == 'refs/heads/main'
+  # this runs on commits from merged RC Pull Request
+  please-release:
+    name: Create Prerelease and Release Pull Request
     runs-on: ubuntu-latest
+    if: ${{ needs.please-release-candidate.outputs.releases_created == 'true' && contains(needs.please-release-candidate.outputs.tag_name, 'rc') }}
+    needs: [ please-release-candidate ]
     steps:
-      - uses: googleapis/release-please-action@v4
+      - name: Run release release-please
+        uses: googleapis/release-please-action@v4.4.0
         with:
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
+          config-file: ".github/release-config.json"
+          manifest-file: ".github/release-manifest.json"
