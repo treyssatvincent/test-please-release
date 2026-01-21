@@ -13,11 +13,19 @@ permissions:
 
 jobs:
   pre-release-please:
+    if: github.ref == 'refs/heads/release-candidate'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: pre-release-please-config.json
+          manifest-file: .pre-release-please-manifest.json
+
+ release-please:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-          prerelease: ${{ github.ref_name == 'refs/heads/release-candidate' }}
-          prerelease-type: rc
