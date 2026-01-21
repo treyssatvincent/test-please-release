@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - release-candidate
 
 permissions:
   contents: write
@@ -19,3 +20,5 @@ jobs:
           token: ${{ secrets.GH_CI_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+          prerelease: ${{ github.ref_name == 'refs/heads/release-candidate' }}
+          prerelease-type: rc
