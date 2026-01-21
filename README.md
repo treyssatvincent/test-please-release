@@ -2,4 +2,4 @@
 
 Important: check "Allow GitHub Actions to create and approve pull requests" in [settings](https://github.com/treyssatvincent/test-please-release/settings/actions).
 
-`release-candidate` as a branch
+1 main branch with 2 jobs
