@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0](https://github.com/treyssatvincent/test-please-release/compare/v1.0.0...v1.1.0) (2026-01-21)
+
+
+### Features
+
+* only main but RC before real realease ([#5](https://github.com/treyssatvincent/test-please-release/issues/5)) ([9e969f5](https://github.com/treyssatvincent/test-please-release/commit/9e969f5772deeb77ecd4d723885f499491daa0fc))
+* release-candidate on branch ([a050cc0](https://github.com/treyssatvincent/test-please-release/commit/a050cc03528264c4b43e54d45f0379c6de41298c))
+* release-candidate on branch ([e2a4e41](https://github.com/treyssatvincent/test-please-release/commit/e2a4e4151119d557adec318bd6153eaf8f322660))
+* use a release-candidate branch ([f0e22e1](https://github.com/treyssatvincent/test-please-release/commit/f0e22e1b9255a201d506420a87ccd7f1ed5c978b))
+
 ## 1.0.0 (2026-01-21)
 
 
