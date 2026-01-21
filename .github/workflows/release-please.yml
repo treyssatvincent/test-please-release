@@ -21,7 +21,7 @@ jobs:
           config-file: pre-release-please-config.json
           manifest-file: .pre-release-please-manifest.json
 
- release-please:
+  release-please:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
