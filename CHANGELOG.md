@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0-rc.3](https://github.com/treyssatvincent/test-please-release/compare/v1.2.0-rc.2...v1.2.0-rc.3) (2026-01-22)
+
+
+### Features
+
+* something ([79ef6ef](https://github.com/treyssatvincent/test-please-release/commit/79ef6ef27d86347025cb03cdf2bd4188ff13aab2))
+
 ## [1.2.0-rc.2](https://github.com/treyssatvincent/test-please-release/compare/v1.2.0-rc.1...v1.2.0-rc.2) (2026-01-22)
 
 
