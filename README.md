@@ -7,3 +7,6 @@ Important: check "Allow GitHub Actions to create and approve pull requests" in [
 what happens if commit after a RC ?
 
 fix: something
+
+
+feat: something
