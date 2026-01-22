@@ -5,3 +5,5 @@ Important: check "Allow GitHub Actions to create and approve pull requests" in [
 1 main branch with 2 jobs
 
 what happens if commit after a RC ?
+
+fix: something
