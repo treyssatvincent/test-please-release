@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/treyssatvincent/test-please-release/compare/v1.2.0...v1.3.0) (2026-01-22)
+
+
+### Features
+
+* something ([79ef6ef](https://github.com/treyssatvincent/test-please-release/commit/79ef6ef27d86347025cb03cdf2bd4188ff13aab2))
+
+
+### Bug Fixes
+
+* something ([9fde7d5](https://github.com/treyssatvincent/test-please-release/commit/9fde7d551d9c408351f66c121092ce42b437c60e))
+
 ## [1.2.0-rc.3](https://github.com/treyssatvincent/test-please-release/compare/v1.2.0-rc.2...v1.2.0-rc.3) (2026-01-22)
 
 
